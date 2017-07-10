@@ -4,8 +4,8 @@ FROM lotosbin/android-jenkins-docker
 # reference https://github.com/nodejs/docker-node/blob/f131cc81c04968f1a60092c5efef54ea276d8b20/8.1/Dockerfile
 USER root
 
-RUN groupadd --gid 1000 node \
-  && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
+# RUN groupadd --gid 1000 node \
+  # && useradd --uid 1000 --gid node --shell /bin/bash --create-home node
 
 # gpg keys listed at https://github.com/nodejs/node#release-team
 RUN set -ex \
