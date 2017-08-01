@@ -38,11 +38,11 @@ RUN mkdir -p $ANDROID_HOME/licenses/ && \
     echo d975f751698a77b662f1254ddbeed3901e976f5a >> $ANDROID_HOME/licenses/intel-android-extra-license
 
 # Install required build-tools
-RUN	echo "y" | android update sdk -u -a --filter platform-tools,android-23,build-tools-23.0.3 && \
-	chmod -R 755 $ANDROID_HOME
+#RUN	echo "y" | android update sdk -u -a --filter platform-tools,android-23,build-tools-23.0.3 && \
+#	chmod -R 755 $ANDROID_HOME
 
-RUN	echo "y" | android update sdk -u -a --filter platform-tools,android-24,build-tools-24.0.1 && \
-	chmod -R 755 $ANDROID_HOME
+#RUN	echo "y" | android update sdk -u -a --filter platform-tools,android-24,build-tools-24.0.1 && \
+#	chmod -R 755 $ANDROID_HOME
 
 # Install 32-bit compatibility for 64-bit environments
 RUN apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 zlib1g:i386 -y
